@@ -18,9 +18,9 @@ import csv
 '''
 res = ['7/25/2024 0:32:29', '220401026@rajalakshmi.edu.in', 'NURTURENET', 'ASHWARIYA M', '220401026@rajalakshmi.edu.in', '8190952138', 'Female', 'Biotechnology', 'DESIGNING AND DEVELOPMENT', 'AGILA SHREE A', '220701015@rajalakshmi.edu.in', '8056332992', 'Female', 'Computer Science and Engineering', 'WEB DEVELOPMENT', 'PRENESHIYA V', '220801153@rajalakshmi.edu.in', '9342737026', 'Female', 'Electronics and Communication Engineering', 'IDEA GUIDANCE', 'SURUTHI M D', '220801215@rajalakshmi.edu.in', '9025696183', 'Female', 'Electronics and Communication Engineering', 'CODER', 'ARUN PRAVIN ', '220401026@rajalakshmi.edu.in', '6381450103', 'Male', 'Biotechnology', 'AI SPECIALIST', 'HG0213', 'Telehealth Platform for Maternal and Child Health in Rural Areas\n', 'https://drive.google.com/open?id=1RrtgJPLfELc_UkuaFev6r0n1_AL5tAQw', 'https://drive.google.com/open?id=1Dr-Bx29ICdG0hi1xQKztfjYAYhrmSLMa', 'NO', 'I agree', '', '', '', 'Health and Well-being']
 
-with open('./prticipants.csv', 'r') as f:
+with open('./participants.csv', 'r') as f:
     csv_data = list(csv.reader(f, delimiter=','))[1:]
-    with open('./out.csv', 'w') as w:
+    with open('./out.csv', 'w', newline='') as w:
         csv_writer = csv.writer(w, delimiter=',')
         csv_writer.writerow(['Team Name', 'Name', 'Email', 'PSID'])
         for row in csv_data:

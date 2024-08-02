@@ -1,4 +1,4 @@
-import csv
+import csv, json
 
 # ['1', 'Winged Wizards', 'HG0302', 'Culture, Education and Tourism', 'HG0302-WingedWizards-PPT - SIVAMAHALAKSHMI S 230101053.pptx', '', '', '3', '1', '2', '1', '2', '1', '10', 'Shakithyan', 'Rejected', 'The Content is AI generated. The Given Solution for the Problem seems to impartical.Flowchart is not defined properly with any visual representation .The Overal Presenation should be improved.'
 
@@ -12,7 +12,7 @@ import csv
 16 - Feedback
 '''
 
-with open('./test.csv', 'r') as f:
+with open('./Evaluvation List.csv') as f:
     csv_reader = list(csv.reader(f, delimiter=','))[2:]
     ans = []
     for row in range(0, (len(csv_reader)), 3):
@@ -32,9 +32,16 @@ with open('./test.csv', 'r') as f:
                 'teamPsid': teamPsid,
                 'teamStatus': teamStatus,
                 'teamTotal': int(teamTotal),
-                'teamFeedback': feedbacks 
+                'teamFeedback': '\n'.join(feedbacks) 
             }
             ans.append(my_dict)
         except Exception as e:
-            print(teamNo)
-    print(ans)
+            print('Error - ' + e)
+    # As json
+    # with open('./res.json', 'w') as res:
+    #     json.dump(ans, res)
+    # As csv
+    with open('./res1.csv', 'w', newline='') as res:
+        csv_writer = csv.writer(res)
+        for i in ans:
+            csv_writer.writerow((i['teamNo'], i['teamName'], i['teamPsid'], i['teamStatus'], i['teamTotal'], i['teamFeedback']))
