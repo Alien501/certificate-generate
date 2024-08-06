@@ -12,7 +12,7 @@ import csv, json
 16 - Feedback
 '''
 
-with open('./Evaluvation List.csv') as f:
+with open('./OG.csv') as f:
     csv_reader = list(csv.reader(f, delimiter=','))[2:]
     ans = []
     for row in range(0, (len(csv_reader)), 3):

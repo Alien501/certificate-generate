@@ -28,19 +28,19 @@ with open('./participants.csv', 'r') as f:
             problemId = row[33]
             teamMemberOne = row[3]
             teamMemberOneEmail = row[4]
-            teamMemberTwo = row[9]
-            teamMemberTwoEmail = row[10]
-            teamMemberThree = row[15]
-            teamMemberThreeEmail = row[16]
-            teamMemberFour = row[21]
-            teamMemberFourEmail = row[22]
-            teamMemberFive = row[27]
-            teamMemberFiveEmail = row[28]
-            csv_writer.writerow([teamName, teamMemberOne, teamMemberOneEmail, problemId])
-            csv_writer.writerow([teamName, teamMemberTwo, teamMemberTwoEmail, problemId])
-            csv_writer.writerow([teamName, teamMemberThree, teamMemberThreeEmail, problemId])
-            csv_writer.writerow([teamName, teamMemberFour, teamMemberFourEmail, problemId])
-            csv_writer.writerow([teamName, teamMemberFive, teamMemberFiveEmail, problemId])
+            # teamMemberTwo = row[9]
+            # teamMemberTwoEmail = row[10]
+            # teamMemberThree = row[15]
+            # teamMemberThreeEmail = row[16]
+            # teamMemberFour = row[21]
+            # teamMemberFourEmail = row[22]
+            # teamMemberFive = row[27]
+            # teamMemberFiveEmail = row[28]
+            # csv_writer.writerow([teamName, teamMemberOne, teamMemberOneEmail, problemId])
+            # csv_writer.writerow([teamName, teamMemberTwo, teamMemberTwoEmail, problemId])
+            # csv_writer.writerow([teamName, teamMemberThree, teamMemberThreeEmail, problemId])
+            # csv_writer.writerow([teamName, teamMemberFour, teamMemberFourEmail, problemId])
+            # csv_writer.writerow([teamName, teamMemberFive, teamMemberFiveEmail, problemId])
             # print('Team name: ' + teamName + ' PSID: ' + problemId)
             # print('Member One: ' + teamMemberOne + ' Team Email - ' + teamMemberOneEmail)
             # print('Member Two: ' + teamMemberTwo + ' Team Email - ' + teamMemberTwoEmail)
